@@ -1,0 +1,19 @@
+{
+  "name": "back-end",
+  "version": "1.0.0",
+  "description": "back-end crud",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/viri4t0/CRUD-NODEJS-MONGODB-ANGULAR.git"
+  },
+  "author": "viri4t0",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/viri4t0/CRUD-NODEJS-MONGODB-ANGULAR/issues"
+  },
+  "homepage": "https://github.com/viri4t0/CRUD-NODEJS-MONGODB-ANGULAR#readme"
+}
