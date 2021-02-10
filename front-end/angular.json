@@ -28,6 +28,7 @@
               "src/assets"
             ],
             "styles": [
+              "src/assets/css/ng-multiselect-dropdown.theme.scss",
               "src/styles.css",
               "src/assets/css/styles.css"
             ],

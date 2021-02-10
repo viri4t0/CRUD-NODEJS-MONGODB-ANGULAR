@@ -1,0 +1,44 @@
+<app-header></app-header>
+
+<div class="formulario">
+    <form #myForm="ngForm" (ngSubmit)="onSubmit()">
+
+        <div class="form-group">
+            <label for="titulo">Titulo de la película</label>
+            <input type="text" name="titulo"  #titulo="ngModel" [(ngModel)]="pelicula.title" required pattern="[a-zA-Z0-9\s]+"/>
+        </div>
+        <div class="form-group">
+            <label for="content">Sinopsis</label>
+            <textarea  name="content"  #content="ngModel" [(ngModel)]="pelicula.content" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="director">Director</label>
+            <label for="nombre">Nombre</label>
+            <label for="apellidos">Apellidos</label>
+            <input type="text" name="nombre"  #nombre="ngModel" [(ngModel)]="pelicula.director.nombre"  pattern="[a-zA-Z0-9\s]+"/>
+            <input type="text" name="apellidos"  #apellidos="ngModel" [(ngModel)]="pelicula.director.apellidos"  pattern="[a-zA-Z0-9\s]+"/>
+        </div>
+        <div class="form-group">
+            <label for="date">Año de lanzamiento</label>
+            <input type="text" name="date"  #date="ngModel" [(ngModel)]="pelicula.date"  pattern="[0-9]+"/>
+        </div>
+
+        <!--  -->
+        <ng-multiselect-dropdown
+        name="category"
+        [placeholder]="'custom placeholder'"
+        [settings]="dropdownSettings"
+        [data]="dropdownList"
+        [(ngModel)]="selectedItems"
+        (onSelect)="onItemSelect($event)"
+        (onSelectAll)="onSelectAll($event)"
+        >
+</ng-multiselect-dropdown>
+        <button type="submit">Guardar</button>
+    </form>
+
+
+</div> 
+
+
+<app-footer></app-footer>
