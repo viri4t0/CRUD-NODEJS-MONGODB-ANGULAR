@@ -38,7 +38,7 @@ peliculaSchema.pre("save",function(next) {
     if(!this.director.nombre && !this.director.apellidos)
     {
         this.director.nombre = "Director desconocido";
-        this.director.apellidos = null;
+        this.director.apellidos = '';
     }
     if(!this.image)
         this.image = null;

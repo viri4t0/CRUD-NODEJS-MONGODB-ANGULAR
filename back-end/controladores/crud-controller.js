@@ -182,6 +182,54 @@ var controller =
             } 
       }) 
     },
+
+    getImage: (req, res) => 
+    {
+        var file = req.params.image;
+        var path_file = './uploads/peliculas/' + file;
+        fs.stat(path_file, (err,exists) => 
+        {
+            if(exists && !err)
+            {
+                return res.sendFile(path.resolve(path_file));
+            }
+            else
+            {
+                return res.status(400).send
+                ({
+                    status: 'error',
+                    message: 'error la imagen no existe',
+                });
+            }
+        });
+    },
+
+    delete: (req,res) =>
+    {
+        var peliculaId = req.params.id;
+
+        Pelicula.findOneAndDelete({_id: peliculaId}, (err, peliculaRemoved) =>
+        {
+
+            if(!peliculaRemoved || err)
+            {
+                return res.status(400).send
+                ({
+                    status: 'error',
+                    message: 'No se ha borrado la pelicula, posiblemente no existe'
+                });
+            }
+
+            return res.status(200).send
+            ({
+                status: 'success',
+                article: peliculaRemoved
+            });
+
+
+        });
+    }
+
 }
 
 

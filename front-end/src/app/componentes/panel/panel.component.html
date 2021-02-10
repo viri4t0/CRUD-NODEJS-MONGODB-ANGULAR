@@ -1,0 +1,52 @@
+<app-header></app-header>
+
+<div class="contenido">
+
+    <h1>Lista de peliculas</h1>
+
+    <table class="table">
+        <tr>
+          <th>Imagen</th>
+          <th>Titulo</th>
+          <th>Sinopsis</th>
+          <th>Año</th>
+          <th>Director</th>
+          <th>Categoria</th>
+          <th>Editar</th>
+          <th>Borrar</th>
+        </tr>
+        <tr *ngFor="let pelicula of peliculas; let i = index">
+          <td class="tdImg"><img src="{{obtenerImagen(pelicula.image)}}"  ></td>
+          <td>{{pelicula.title}}</td>
+          <td>{{pelicula.content}}</td>
+          <td>{{pelicula.date}}</td>
+          <td>{{pelicula.director.nombre +' '+ pelicula.director.apellidos}}</td>
+          <td>{{pelicula.category}}</td>
+          <td><button class="btn-editar">Editar</button></td>
+          <td><button class="btn-editar" (click)="eliminarPelicula(pelicula._id,i)">Borrar</button></td>
+        </tr>
+    </table>
+      
+
+    <div *ngIf="peliculas">
+    </div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<app-footer></app-footer>

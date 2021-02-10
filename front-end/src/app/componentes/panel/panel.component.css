@@ -1,0 +1,75 @@
+.contenido
+{
+   margin-top: 50px;
+}
+
+h1 
+{
+    text-align: center;
+    color: white;
+    margin-bottom: 100px;
+    text-shadow: 0 1px 0 #CCCCCC, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+}
+
+.table
+{
+    width: 75%;
+    margin:  auto;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+th 
+{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #910091;
+    color: white;
+    border: 1px solid rgb(199, 131, 255);
+}
+
+td
+{
+    border: 1px solid rgb(199, 131, 255);
+}
+
+tr:nth-child(even){background-color: #fdf5ff;}
+
+.tdImg
+{
+    width: 15%;
+}
+
+.tdImg  img
+{
+    width: 100%;
+    display: block;
+    
+}
+
+
+.btn-editar {
+	box-shadow: 0px 1px 0px 0px #f0f7fa;
+	background:linear-gradient(to bottom, #8f008f 5%, #d102ca 100%);
+	background-color:#8f008f;
+	border-radius:9px;
+	border:1px solid #66004b;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:19px 24px;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #5b6178;
+}
+.btn-editar:hover {
+	background:linear-gradient(to bottom, #d102ca 5%, #8f008f 100%);
+	background-color:#d102ca;
+}
+.btn-editar:active {
+	position:relative;
+	top:1px;
+}
